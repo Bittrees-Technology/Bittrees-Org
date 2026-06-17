@@ -3,15 +3,3 @@
 @tailwind utilities;
 
 html, body { margin: 0; padding: 0; background: #ffffff; }
-
-/* Hub site cards — orange accent on hover (Bittrees Brand Standard). */
-.hub-card {
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
-}
-.hub-card:hover {
-  border-color: #F7931A !important;
-  box-shadow: 0 2px 0 #F7931A;
-  transform: translateY(-1px);
-}
-
-a:hover > img { transform: scale(1.08); }
