@@ -1,7 +1,7 @@
 const SITES = [
-  { name: "Bittrees, Inc.", href: "https://gov.bittrees.org", box: "border-green-600 shadow-green-600 hover:shadow-green-800" },
-  { name: "Bittrees Capital", href: "https://capital.bittrees.org", box: "border-orange-600 shadow-orange-600 hover:shadow-orange-800" },
-  { name: "Bittrees Research", href: "https://research.bittrees.org", box: "border-gray-400 shadow-gray-500 hover:shadow-gray-700" },
+  { name: "Bittrees, Inc.", href: "https://gov.bittrees.org", box: "border-orange-600 shadow-orange-600 hover:shadow-orange-800" },
+  { name: "Bittrees Capital", href: "https://capital.bittrees.org", box: "border-gray-400 shadow-gray-500 hover:shadow-gray-700" },
+  { name: "Bittrees Research", href: "https://research.bittrees.org", box: "border-green-600 shadow-green-600 hover:shadow-green-800" },
 ];
 
 function App() {
@@ -20,13 +20,6 @@ function App() {
               className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
             />
           </a>
-
-          <h1
-            className="font-bold"
-            style={{ fontFamily: "'Georgia Pro', Georgia, serif", fontSize: "2rem", letterSpacing: "-0.01em" }}
-          >
-            Bittrees
-          </h1>
 
           {SITES.map((s) => (
             <a
