@@ -3,3 +3,20 @@
 @tailwind utilities;
 
 html, body { margin: 0; padding: 0; background: #ffffff; }
+
+/* /info mission blurb — fluid type, comfortable measure on every screen. */
+.info-text {
+  font-family: "Times New Roman", "Tinos", serif;
+  font-size: clamp(1.05rem, 4.3vw, 1.25rem);
+  line-height: 1.7;
+  color: #1a1a1a;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 32rem;
+  margin: 1.75rem auto 0;
+}
+.info-text .nowrap { white-space: nowrap; }
+
+@media (max-width: 480px) {
+  .info-text { line-height: 1.6; margin-top: 1.5rem; }
+}
