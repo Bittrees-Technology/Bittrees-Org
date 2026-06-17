@@ -28,7 +28,7 @@ function Info() {
       <p className="info-text">
         We’re dedicated to making business simpler and more impactful by harnessing the power of
         technology, all while nurturing and fortifying bonds within the metaverse community and
-        extending these connections even <span className="nowrap">further.🌳</span>
+        extending these connections even further.
       </p>
     </div>
   );
