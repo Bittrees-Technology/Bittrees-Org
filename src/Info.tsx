@@ -37,16 +37,36 @@ function Info() {
         extending these connections even further.
       </p>
 
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0.75rem", marginTop: "2rem" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "0.75rem",
+          marginTop: "2rem",
+          width: "100%",
+          maxWidth: "32rem",
+          alignItems: "stretch",
+        }}
+      >
         {LINKS.map((l) => (
           <a
             key={l.href}
-            className="text-base text-black no-underline hover:underline font-newtimesroman"
+            className="text-black no-underline hover:underline font-newtimesroman"
             target="_self"
             rel="noreferrer"
             href={l.href}
+            style={{ flex: "1 1 0", minWidth: 0, display: "flex" }}
           >
-            <div className={`border px-4 py-2 flex justify-center items-center shadow-md ${l.box}`}>
+            <div
+              className={`border px-3 py-2 shadow-md ${l.box}`}
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                fontSize: "clamp(0.8rem, 3.2vw, 1rem)",
+              }}
+            >
               {l.name}
             </div>
           </a>
