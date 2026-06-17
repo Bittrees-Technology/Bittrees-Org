@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const SITES = [
   { name: "Bittrees, Inc.", href: "https://gov.bittrees.org", box: "border-orange-600 shadow-orange-600 hover:shadow-orange-800" },
   { name: "Bittrees Research", href: "https://research.bittrees.org", box: "border-green-600 shadow-green-600 hover:shadow-green-800" },
@@ -19,7 +21,7 @@ function App() {
       }}
     >
       <div className="flex flex-col gap-6 items-center">
-        <a href="/" className="mx-auto">
+        <Link to="/info" className="mx-auto">
           <img
             src="/bittrees.png"
             width="128px"
@@ -27,7 +29,7 @@ function App() {
             alt="Bittrees"
             className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
           />
-        </a>
+        </Link>
 
         {SITES.map((s) => (
           <a
