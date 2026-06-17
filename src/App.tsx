@@ -6,40 +6,45 @@ const SITES = [
 
 function App() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <main className="bg-[#ffffff] flex flex-col min-h-screen align-top">
-        <div className="flex flex-col gap-6 p-6 items-center">
-          <div className="h-5"></div>
+    <div
+      style={{
+        minHeight: "100vh",
+        width: "100%",
+        background: "#ffffff",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "2rem 1rem",
+        boxSizing: "border-box",
+      }}
+    >
+      <div className="flex flex-col gap-6 items-center">
+        <a href="/" className="mx-auto">
+          <img
+            src="/bittrees.png"
+            width="128px"
+            height="128px"
+            alt="Bittrees"
+            className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
+          />
+        </a>
 
-          <a href="/" className="mx-auto">
-            <img
-              src="/bittrees.png"
-              width="128px"
-              height="128px"
-              alt="Bittrees"
-              className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
-            />
+        {SITES.map((s) => (
+          <a
+            key={s.href}
+            className="text-xl text-black no-underline hover:underline font-newtimesroman"
+            target="_self"
+            rel="noreferrer"
+            href={s.href}
+          >
+            <div className={`mx-auto border p-4 w-80 flex flex-col justify-center items-center shadow-md ${s.box}`}>
+              <div className="h-5"></div>
+              {s.name}
+              <div className="h-5"></div>
+            </div>
           </a>
-
-          {SITES.map((s) => (
-            <a
-              key={s.href}
-              className="text-xl text-black no-underline hover:underline font-newtimesroman"
-              target="_self"
-              rel="noreferrer"
-              href={s.href}
-            >
-              <div className={`mx-auto border p-4 w-80 flex flex-col justify-center items-center shadow-md ${s.box}`}>
-                <div className="h-5"></div>
-                {s.name}
-                <div className="h-5"></div>
-              </div>
-            </a>
-          ))}
-
-          <div className="h-5"></div>
-        </div>
-      </main>
+        ))}
+      </div>
     </div>
   );
 }
