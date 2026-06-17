@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 
+const LINKS = [
+  { name: "Bittrees, Inc.", href: "https://gov.bittrees.org", box: "border-orange-600 shadow-orange-600 hover:shadow-orange-800" },
+  { name: "Research", href: "https://research.bittrees.org", box: "border-green-600 shadow-green-600 hover:shadow-green-800" },
+  { name: "Capital", href: "https://capital.bittrees.org", box: "border-gray-400 shadow-gray-500 hover:shadow-gray-700" },
+];
+
 function Info() {
   return (
     <div
@@ -30,6 +36,22 @@ function Info() {
         technology, all while nurturing and fortifying bonds within the metaverse community and
         extending these connections even further.
       </p>
+
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0.75rem", marginTop: "2rem" }}>
+        {LINKS.map((l) => (
+          <a
+            key={l.href}
+            className="text-base text-black no-underline hover:underline font-newtimesroman"
+            target="_self"
+            rel="noreferrer"
+            href={l.href}
+          >
+            <div className={`border px-4 py-2 flex justify-center items-center shadow-md ${l.box}`}>
+              {l.name}
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
