@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 
-const SITES = [
-  { name: "Bittrees, Inc.", href: "https://gov.bittrees.org", box: "border-orange-600 shadow-orange-600 hover:shadow-orange-800" },
-  { name: "Research", href: "https://research.bittrees.org", box: "border-green-600 shadow-green-600 hover:shadow-green-800" },
-  { name: "Capital", href: "https://capital.bittrees.org", box: "border-gray-400 shadow-gray-500 hover:shadow-gray-700" },
-];
+import ecosystem from "./ecosystem.json";
+
+const SITES = ecosystem.projects;
 
 function App() {
   return (
