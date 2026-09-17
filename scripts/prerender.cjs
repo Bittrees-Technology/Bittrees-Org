@@ -1,6 +1,7 @@
 // Render the same React components used by the browser into crawlable HTML.
 const fs = require('node:fs');
 const path = require('node:path');
+const { createRequire } = require('node:module');
 const ts = require('typescript');
 const React = require('react');
 const { renderToString } = require('react-dom/server');
@@ -18,7 +19,7 @@ function component(name) {
   });
   const exports = {};
   // Only compile our two local, build-time page components.
-  new Function('require', 'exports', outputText)(require, exports);
+  new Function('require', 'exports', outputText)(createRequire(filename), exports);
   return exports.default;
 }
 

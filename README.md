@@ -36,6 +36,13 @@ npm run build      # production build → build/
 Deploys to Vercel and is served at `bittrees.org`. It's a static build with no
 environment variables or backend.
 
+## Content operations
+
+Both public pages use `src/ecosystem.json`. See
+[content ownership, freshness, link checks, performance budgets, and support gaps](docs/content-operations.md).
+Run `yarn test:operations`, `yarn check:content`, `yarn check:links`, and
+`yarn check:budgets` after building. Owner assignment remains an explicit release gate.
+
 ## Search indexing
 
 `npm run build` prerenders the existing React page components into `index.html`
