@@ -33,10 +33,11 @@ Build limits: 250 KB aggregate gzipped JavaScript, 50 KB aggregate gzipped CSS,
 and 1 MB per image. `yarn check:budgets` fails above these limits. These are bundle
 budgets, not measured field Web Vitals or an availability SLO.
 
-Analytics are currently disabled: `reportWebVitals()` receives no reporting
-callback. Retain this setting until an owner approves a documented aggregate-only
-measurement purpose and retention policy. Do not introduce visitor identifiers,
-wallet addresses, URLs with query strings, or session replay as routine analytics.
+The site loads the existing consent-based Bittrees Insights script from
+`public/index.html`. Web Vitals reporting remains disabled: `reportWebVitals()`
+receives no reporting callback. These content checks do not change analytics
+consent, collection, or retention. Do not introduce visitor identifiers, wallet
+addresses, URLs with query strings, or session replay as routine analytics.
 
 ## Support and uptime
 

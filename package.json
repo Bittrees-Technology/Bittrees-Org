@@ -1,6 +1,6 @@
 {
   "name": "bittrees-org-ui",
-  "homepage": "./",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && node scripts/prerender.cjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "check:content": "node scripts/check-content.mjs",
