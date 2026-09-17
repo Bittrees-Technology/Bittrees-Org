@@ -35,3 +35,22 @@ npm run build      # production build → build/
 
 Deploys to Vercel and is served at `bittrees.org`. It's a static build with no
 environment variables or backend.
+
+## Search indexing
+
+`npm run build` prerenders the existing React page components into `index.html`
+and `info.html`, with distinct titles, descriptions, and canonical URLs. It also
+creates `sitemap.xml`; `robots.txt` advertises that sitemap. Internal page links
+load the document so navigation keeps the matching metadata.
+
+Vercel uses clean URLs and removes trailing slashes. There is no catch-all SPA
+rewrite: unknown URLs must return HTTP 404 using `public/404.html`, rather than
+serve the homepage with HTTP 200. `/index` redirects to `/`; Vercel's clean-URL
+handling normalizes `.html` aliases. The explicit build command in `vercel.json`
+ensures the hosting project's older `react-scripts build` override cannot skip
+prerendering.
+
+After deployment, check `/`, `/info`, `/sitemap.xml`, `/robots.txt`, a nonexistent
+path, `/info/`, and `/index.html`. In Google Search Console, inspect the actual
+excluded URLs, submit the sitemap, and validate only issues that are resolved.
+HTTP and www redirects to the canonical HTTPS domain are intentional.

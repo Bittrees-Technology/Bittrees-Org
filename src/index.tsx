@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <App />,
+    element: <main><h1>Page not found</h1><a href="/">Return to Bittrees</a></main>,
   },
 ]);
 
