@@ -21,7 +21,7 @@ function Info() {
         boxSizing: "border-box",
       }}
     >
-      <Link to="/" className="mx-auto">
+      <Link reloadDocument to="/" className="mx-auto">
         <img
           src="/bittrees.png"
           width="112px"

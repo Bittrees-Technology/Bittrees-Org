@@ -21,7 +21,7 @@ function App() {
       }}
     >
       <div className="flex flex-col gap-6 items-center">
-        <Link to="/info" className="mx-auto">
+        <Link reloadDocument to="/info" className="mx-auto">
           <img
             src="/bittrees.png"
             width="128px"
