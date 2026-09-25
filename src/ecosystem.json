@@ -24,6 +24,14 @@
       "box": "border-gray-400 shadow-gray-500 hover:shadow-gray-700",
       "owner": null,
       "lastReviewed": "2026-09-05"
+    },
+    {
+      "id": "bittrees-ai",
+      "name": "AI \u2014 Mac preview",
+      "href": "https://github.com/Bittrees-Technology/ai/blob/main/docs/macos-companion.md",
+      "box": "border-teal-600 shadow-teal-600 hover:shadow-teal-800",
+      "owner": null,
+      "lastReviewed": "2026-09-25"
     }
   ]
 }
