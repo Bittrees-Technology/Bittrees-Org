@@ -39,6 +39,7 @@ function Info() {
         style={{
           display: "flex",
           gap: "0.75rem",
+          flexWrap: "wrap",
           marginTop: "2rem",
           width: "100%",
           maxWidth: "32rem",
