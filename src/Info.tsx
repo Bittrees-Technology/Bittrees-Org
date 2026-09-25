@@ -30,9 +30,8 @@ function Info() {
       </Link>
 
       <p className="info-text">
-        We’re dedicated to making business simpler and more impactful by harnessing the power of
-        technology, all while nurturing and fortifying bonds within the metaverse community and
-        extending these connections even further.
+        Bittrees brings together governance, research and capital.
+        Use the links below to visit the individual sites.
       </p>
 
       <div

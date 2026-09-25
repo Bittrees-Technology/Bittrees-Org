@@ -4,7 +4,7 @@
 
 html, body { margin: 0; padding: 0; background: #ffffff; }
 
-/* /info mission blurb — fluid type, comfortable measure on every screen. */
+/* /info description — fluid type, comfortable measure on every screen. */
 .info-text {
   font-family: "Times New Roman", "Tinos", serif;
   font-size: clamp(1.05rem, 4.3vw, 1.25rem);
