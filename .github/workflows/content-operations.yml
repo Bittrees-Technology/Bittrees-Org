@@ -26,5 +26,8 @@ jobs:
           CI: 'true'
       - run: yarn build
       - run: yarn check:budgets
+      - run: yarn check:seo
+      - run: yarn playwright install --with-deps chromium
+      - run: yarn test:seo-browser
       - run: yarn check:links
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'

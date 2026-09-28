@@ -39,6 +39,8 @@ for (const page of pages) {
     .replace(/<meta property="og:url" content="[^"]*"\s*\/?\s*>/, `<meta property="og:url" content="${url}"/>`)
     .replace(/<meta property="og:title" content="[^"]*"\s*\/?\s*>/, `<meta property="og:title" content="${page.title}"/>`)
     .replace(/<meta property="og:description" content="[^"]*"\s*\/?\s*>/, `<meta property="og:description" content="${page.description}"/>`)
+    .replace(/<meta name="twitter:title" content="[^"]*"\s*\/?\s*>/, `<meta name="twitter:title" content="${page.title}"/>`)
+    .replace(/<meta name="twitter:description" content="[^"]*"\s*\/?\s*>/, `<meta name="twitter:description" content="${page.description}"/>`)
     .replace('</head>', `<link rel="canonical" href="${url}"/></head>`)
     .replace(/<noscript>.*?<\/noscript>/, '')
     .replace('<div id="root"></div>', `<div id="root">${markup}</div>`);

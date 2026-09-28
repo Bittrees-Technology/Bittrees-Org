@@ -30,7 +30,9 @@
     "check:content": "node scripts/check-content.mjs",
     "check:links": "node scripts/check-content.mjs --links",
     "check:budgets": "node scripts/check-budgets.mjs",
-    "test:operations": "node --test scripts/*.test.mjs"
+    "test:operations": "node --test scripts/*.test.mjs",
+    "check:seo": "node scripts/check-seo.mjs",
+    "test:seo-browser": "node scripts/seo-browser.mjs"
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.0"
   }
 }
