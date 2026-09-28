@@ -6,7 +6,7 @@ const LINKS = ecosystem.projects;
 
 function Info() {
   return (
-    <div
+    <main
       style={{
         minHeight: "100vh",
         width: "100%",
@@ -19,14 +19,18 @@ function Info() {
         boxSizing: "border-box",
       }}
     >
+      <h1 className="sr-only">About Bittrees</h1>
       <Link reloadDocument to="/" className="mx-auto">
-        <img
-          src="/bittrees.png"
-          width="112px"
-          height="112px"
-          alt="Bittrees"
-          className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
-        />
+        <picture>
+          <source srcSet="/bittrees.webp" type="image/webp" />
+          <img
+            src="/bittrees.png"
+            width={112}
+            height={112}
+            alt="Bittrees"
+            className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
+          />
+        </picture>
       </Link>
 
       <p className="info-text">
@@ -71,7 +75,7 @@ function Info() {
           </a>
         ))}
       </div>
-    </div>
+    </main>
   );
 }
 

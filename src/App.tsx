@@ -6,7 +6,7 @@ const SITES = ecosystem.projects.filter((project) => project.id !== "bittrees-ai
 
 function App() {
   return (
-    <div
+    <main
       style={{
         minHeight: "100vh",
         width: "100%",
@@ -18,15 +18,19 @@ function App() {
         boxSizing: "border-box",
       }}
     >
+      <h1 className="sr-only">Bittrees</h1>
       <div className="flex flex-col gap-6 items-center">
         <Link reloadDocument to="/info" className="mx-auto">
-          <img
-            src="/bittrees.png"
-            width="128px"
-            height="128px"
-            alt="Bittrees"
-            className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
-          />
+          <picture>
+            <source srcSet="/bittrees.webp" type="image/webp" />
+            <img
+              src="/bittrees.png"
+              width={128}
+              height={128}
+              alt="Bittrees"
+              className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
+            />
+          </picture>
         </Link>
 
         {SITES.map((s) => (
@@ -37,7 +41,7 @@ function App() {
             rel="noreferrer"
             href={s.href}
           >
-            <div className={`mx-auto border p-4 w-80 flex flex-col justify-center items-center shadow-md ${s.box}`}>
+            <div className={`mx-auto border p-4 w-80 max-w-[calc(100vw-2rem)] flex flex-col justify-center items-center shadow-md ${s.box}`}>
               <div className="h-5"></div>
               {s.name}
               <div className="h-5"></div>
@@ -45,7 +49,7 @@ function App() {
           </a>
         ))}
       </div>
-    </div>
+    </main>
   );
 }
 
