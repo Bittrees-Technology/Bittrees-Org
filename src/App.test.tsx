@@ -23,4 +23,5 @@ test("renders the Bittrees destinations", () => {
     "https://capital.bittrees.org"
   );
   expect(screen.queryByRole("link", { name: "eCrypt" })).not.toBeInTheDocument();
+  expect(document.querySelectorAll('a[href^="https://"]')).toHaveLength(3);
 });

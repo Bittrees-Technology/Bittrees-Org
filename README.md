@@ -2,23 +2,22 @@
 
 The public landing page for **bittrees.org**. It's a lightweight hub that introduces
 the organization and routes visitors to the three primary Bittrees sites, plus a short
-`/info` page with the mission and the Bittrees AI Mac preview.
+`/info` page with the mission.
 
 The Bittrees family it links out to:
 
 - **Bittrees, Inc.** — governance → [gov.bittrees.org](https://gov.bittrees.org)
 - **Research** — the members' research foundation → [research.bittrees.org](https://research.bittrees.org)
 - **Capital** — holdings & treasury → [capital.bittrees.org](https://capital.bittrees.org)
-- **AI — Mac preview** — local AI companion → [ai.bittrees.org](https://ai.bittrees.org)
-
-The landing page is intentionally limited to **Bittrees, Inc.**, **Research**, and
-**Capital**. Do not add product links there. Products that have reached a more-or-less
-complete state belong in the separate [Bittrees Index](https://index.bittrees.org).
+Both public pages are intentionally limited to **Bittrees, Inc.**, **Research**, and
+**Capital**. Do not add product links to bittrees.org. Products that have reached a
+more-or-less complete state belong in the separate
+[Bittrees Index](https://index.bittrees.org).
 
 ## Pages
 
 - `/` — the hub: the Bittrees mark (which opens `/info`) over the three primary site cards.
-- `/info` — the mission blurb, three primary links and the AI Mac preview, laid out for reading.
+- `/info` — the mission blurb and the same three primary links, laid out for reading.
 
 ## Stack
 

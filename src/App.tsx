@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import ecosystem from "./ecosystem.json";
 
-const SITES = ecosystem.projects.filter((project) => project.id !== "bittrees-ai");
+const SITES = ecosystem.projects;
 
 function App() {
   return (
