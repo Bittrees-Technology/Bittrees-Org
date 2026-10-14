@@ -26,14 +26,6 @@
       "lastReviewed": "2026-09-05"
     },
     {
-      "id": "ecrypt",
-      "name": "eCrypt",
-      "href": "https://ecrypt.bittrees.org",
-      "box": "border-lime-500 shadow-lime-500 hover:shadow-lime-700",
-      "owner": null,
-      "lastReviewed": "2026-10-14"
-    },
-    {
       "id": "bittrees-ai",
       "name": "AI \u2014 Mac preview",
       "href": "https://ai.bittrees.org",
