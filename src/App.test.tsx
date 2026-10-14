@@ -22,8 +22,5 @@ test("renders the Bittrees destinations", () => {
     "href",
     "https://capital.bittrees.org"
   );
-  expect(screen.getByRole("link", { name: "eCrypt" })).toHaveAttribute(
-    "href",
-    "https://ecrypt.bittrees.org"
-  );
+  expect(screen.queryByRole("link", { name: "eCrypt" })).not.toBeInTheDocument();
 });
