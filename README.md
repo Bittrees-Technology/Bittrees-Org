@@ -1,19 +1,21 @@
 # bittrees.org — hub
 
 The public landing page for **bittrees.org**. It's a lightweight hub that introduces
-the organization and routes visitors to the three Bittrees apps, plus a short `/info`
-page with the mission.
+the organization and routes visitors to four live Bittrees destinations, plus a short
+`/info` page with the mission and the Bittrees AI Mac preview.
 
 The Bittrees family it links out to:
 
 - **Bittrees, Inc.** — governance → [gov.bittrees.org](https://gov.bittrees.org)
 - **Research** — the members' research foundation → [research.bittrees.org](https://research.bittrees.org)
 - **Capital** — holdings & treasury → [capital.bittrees.org](https://capital.bittrees.org)
+- **eCrypt** — wallet-gated encrypted redactions → [ecrypt.bittrees.org](https://ecrypt.bittrees.org)
+- **AI — Mac preview** — local AI companion → [ai.bittrees.org](https://ai.bittrees.org)
 
 ## Pages
 
-- `/` — the hub: the Bittrees mark (which opens `/info`) over the three app cards.
-- `/info` — the mission blurb and the same three links, laid out for reading.
+- `/` — the hub: the Bittrees mark (which opens `/info`) over the four live destination cards.
+- `/info` — the mission blurb, four live links and the AI Mac preview, laid out for reading.
 
 ## Stack
 
