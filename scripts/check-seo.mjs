@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
-for(const [file,path,title] of [['index.html','/','Bittrees | Governance, Research, and Capital'],['info.html','/info','About Bittrees | Our Mission']]){
+for(const [file,path,title] of [['index.html','/','Bittrees | Governance, Research, Capital & Technology'],['info.html','/info','About Bittrees | Our Mission']]){
  const html=readFileSync('build/'+file,'utf8');
  assert.equal((html.match(/rel="canonical"/g)||[]).length,1);
  assert(html.includes(`href="https://bittrees.org${path}"`));
