@@ -36,5 +36,23 @@
       "destination": "/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/administration",
+      "destination": "/api/project-admin"
+    },
+    {
+      "source": "/administration/",
+      "destination": "/api/project-admin"
+    },
+    {
+      "source": "/api/project-admin/:path*",
+      "destination": "/api/project-admin"
+    },
+    {
+      "source": "/api/shared-roles-health",
+      "destination": "/api/project-admin"
+    }
   ]
 }
