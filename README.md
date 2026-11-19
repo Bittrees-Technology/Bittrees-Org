@@ -1,7 +1,7 @@
 # bittrees.org — hub
 
 The public landing page for **bittrees.org**. It's a lightweight hub that introduces
-the Bittrees DAO and ecosystem, plus a short `/info` page with the mission.
+the Bittrees DAO and ecosystem, plus a short `/info` page explaining their relationship.
 
 The Bittrees family it links out to:
 
@@ -16,7 +16,7 @@ product listings in that directory and the main landing page minimal.
 ## Pages
 
 - `/` — the entry point: the Bittrees mark (which opens `/info`), a DAO group with three destinations, and an Ecosystem link.
-- `/info` — the mission blurb and the same three primary links, laid out for reading.
+- `/info` — the DAO and ecosystem relationship, the three DAO destinations, the ecosystem hub and a link to report a website issue.
 
 ## Stack
 

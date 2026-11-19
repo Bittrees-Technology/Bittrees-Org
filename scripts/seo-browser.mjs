@@ -27,7 +27,7 @@ try{
   assert.equal(await page.getByRole('link',{name:/AI.*Mac/}).count(),0);
   await page.locator('a.emblem-link').click();
   await page.waitForURL(base+'/info');
-  assert.equal(await page.title(),'About Bittrees | Our Mission');
+  assert.equal(await page.title(),'About Bittrees | DAO & Ecosystem');
   assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),'https://bittrees.org/info');
   await page.getByRole('link',{name:'Bittrees home',exact:true}).click();
   await page.waitForURL(base+'/');
