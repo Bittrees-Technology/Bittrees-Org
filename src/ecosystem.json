@@ -7,7 +7,9 @@
       "href": "https://gov.bittrees.org",
       "box": "border-orange-600 shadow-orange-600 hover:shadow-orange-800",
       "owner": null,
-      "lastReviewed": "2026-09-05"
+      "lastReviewed": "2026-09-05",
+      "group": "dao",
+      "accent": "governance"
     },
     {
       "id": "bittrees-research",
@@ -15,7 +17,9 @@
       "href": "https://research.bittrees.org",
       "box": "border-green-600 shadow-green-600 hover:shadow-green-800",
       "owner": null,
-      "lastReviewed": "2026-09-05"
+      "lastReviewed": "2026-09-05",
+      "group": "dao",
+      "accent": "research"
     },
     {
       "id": "bittrees-capital",
@@ -23,7 +27,18 @@
       "href": "https://capital.bittrees.org",
       "box": "border-gray-400 shadow-gray-500 hover:shadow-gray-700",
       "owner": null,
-      "lastReviewed": "2026-09-05"
+      "lastReviewed": "2026-09-05",
+      "group": "dao",
+      "accent": "capital"
+    },
+    {
+      "id": "bittrees-ecosystem",
+      "name": "Bittrees Ecosystem",
+      "group": "ecosystem",
+      "accent": "explore",
+      "href": "https://index.bittrees.org",
+      "owner": null,
+      "lastReviewed": "2026-11-19"
     }
   ]
 }

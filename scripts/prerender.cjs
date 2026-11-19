@@ -26,7 +26,7 @@ function component(name) {
 const build = path.join(__dirname, '..', 'build');
 const template = fs.readFileSync(path.join(build, 'index.html'), 'utf8');
 const pages = [
-  { route: '/', file: 'index.html', component: 'App', title: 'Bittrees | Governance, Research, and Capital', description: 'Bittrees connects governance, research, and capital for a more collaborative future.' },
+  { route: '/', file: 'index.html', component: 'App', title: 'Bittrees | DAO &amp; Ecosystem', description: 'Explore the Bittrees DAO for governance, research and capital, and an ecosystem of independently useful products, tools and communities.' },
   { route: '/info', file: 'info.html', component: 'Info', title: 'About Bittrees | Our Mission', description: 'Learn about the Bittrees mission: making business simpler and more impactful through technology and community.' },
 ];
 
