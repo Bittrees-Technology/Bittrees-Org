@@ -20,7 +20,7 @@ function Info() {
             <h1>About Bittrees</h1>
           </header>
           <div id="about-content" className="about-content">
-            <p>Bittrees.org is the entry point to a connected ecosystem of independently useful products, tools and communities. Governance, Research and Capital make up the Bittrees DAO. All other Bittrees products and communities make up the ecosystem, each with its own purpose and website. The Bittrees Index brings those destinations together.</p>
+            <p>We’re dedicated to making business simpler and more impactful by harnessing the power of technology, all while nurturing and fortifying bonds within the metaverse community and extending these connections even further.</p>
           </div>
           <section aria-labelledby="about-dao-heading">
             <h2 id="about-dao-heading" className="group-label">DAO</h2>
@@ -35,7 +35,6 @@ function Info() {
             <a className="destination explore" href={DIRECTORY.href}>Explore products</a>
           </section>
           <footer>
-            <p><a href="https://github.com/Bittrees-Technology/Bittrees-Org/issues">Report a website issue</a></p>
             <Link reloadDocument to="/">Back to home</Link>
           </footer>
         </div>

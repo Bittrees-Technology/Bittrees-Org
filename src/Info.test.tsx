@@ -2,20 +2,22 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Info from "./Info";
 
-test("explains the DAO and ecosystem with useful destinations and a route back home", () => {
+test("shows the Bittrees mission and keeps the DAO, ecosystem, and home links", () => {
   render(
     <MemoryRouter>
       <Info />
     </MemoryRouter>
   );
 
-  expect(screen.getByText(/Governance, Research and Capital make up the Bittrees DAO/)).toBeInTheDocument();
+  expect(document.querySelector("#about-content")).toHaveTextContent(
+    /^We’re dedicated to making business simpler and more impactful by harnessing the power of technology, all while nurturing and fortifying bonds within the metaverse community and extending these connections even further\.$/
+  );
   expect(screen.getByRole("heading", { name: "DAO" })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: "Ecosystem" })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Explore products" })).toHaveAttribute("href", "https://index.bittrees.org");
-  expect(screen.getByRole("link", { name: "Report a website issue" })).toHaveAttribute("href", "https://github.com/Bittrees-Technology/Bittrees-Org/issues");
+  expect(screen.queryByRole("link", { name: "Report a website issue" })).not.toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Bittrees home" })).toHaveAttribute("href", "/");
   expect(screen.getByRole("link", { name: "Back to home" })).toHaveAttribute("href", "/");
   expect(screen.queryByRole("link", { name: /AI/i })).not.toBeInTheDocument();
-  expect(document.querySelectorAll('a[href^="https://"]')).toHaveLength(5);
+  expect(document.querySelectorAll('a[href^="https://"]')).toHaveLength(4);
 });
