@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ecosystem from "./ecosystem.json";
 
 const DAO = ecosystem.projects.filter((site) => site.group === "dao");
+const DIRECTORY = ecosystem.projects.find((site) => site.id === "bittrees-ecosystem")!;
 
 function Info() {
   return (
@@ -19,14 +20,24 @@ function Info() {
             <h1>About Bittrees</h1>
           </header>
           <div id="about-content" className="about-content">
-            <p>We’re dedicated to making business simpler and more impactful by harnessing the power of technology, all while nurturing and fortifying bonds within the metaverse community and extending these connections even further.</p>
+            <p>Bittrees.org is the entry point to a connected ecosystem of independently useful products, tools and communities. Governance, Research and Capital make up the Bittrees DAO. All other Bittrees products and communities make up the ecosystem, each with its own purpose and website. The Bittrees Index brings those destinations together.</p>
           </div>
-          <nav className="destination-list about-destinations" aria-label="The Bittrees DAO">
-            {DAO.map((site) => (
-              <a key={site.id} className={`destination ${site.accent}`} href={site.href}>{site.name}</a>
-            ))}
-          </nav>
-          <footer><Link reloadDocument to="/">Back to home</Link></footer>
+          <section aria-labelledby="about-dao-heading">
+            <h2 id="about-dao-heading" className="group-label">DAO</h2>
+            <nav className="destination-list about-destinations" aria-label="The Bittrees DAO">
+              {DAO.map((site) => (
+                <a key={site.id} className={`destination ${site.accent}`} href={site.href}>{site.name}</a>
+              ))}
+            </nav>
+          </section>
+          <section className="ecosystem" aria-labelledby="about-ecosystem-heading">
+            <h2 id="about-ecosystem-heading" className="group-label">Ecosystem</h2>
+            <a className="destination explore" href={DIRECTORY.href}>Explore products</a>
+          </section>
+          <footer>
+            <p><a href="https://github.com/Bittrees-Technology/Bittrees-Org/issues">Report a website issue</a></p>
+            <Link reloadDocument to="/">Back to home</Link>
+          </footer>
         </div>
       </main>
     </>
