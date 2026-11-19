@@ -16,7 +16,7 @@ test("renders the Bittrees destinations", () => {
   );
   expect(screen.getByRole("link", { name: "Research" })).toHaveAttribute(
     "href",
-    "https://research.bittrees.org"
+    "https://research.bittrees.org/about"
   );
   expect(screen.getByRole("link", { name: "Capital" })).toHaveAttribute(
     "href",
