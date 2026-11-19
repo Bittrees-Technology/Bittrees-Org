@@ -1,22 +1,21 @@
 # bittrees.org — hub
 
 The public landing page for **bittrees.org**. It's a lightweight hub that introduces
-the organization and routes visitors to the three primary Bittrees sites, plus a short
-`/info` page with the mission.
+the Bittrees DAO and ecosystem, plus a short `/info` page with the mission.
 
 The Bittrees family it links out to:
 
 - **Bittrees, Inc.** — governance → [gov.bittrees.org](https://gov.bittrees.org)
 - **Research** — the members' research foundation → [research.bittrees.org](https://research.bittrees.org)
 - **Capital** — holdings & treasury → [capital.bittrees.org](https://capital.bittrees.org)
-Both public pages are intentionally limited to **Bittrees, Inc.**, **Research**, and
-**Capital**. Do not add product links to bittrees.org. Products that have reached a
-more-or-less complete state belong in the separate
-[Bittrees Index](https://index.bittrees.org).
+**Bittrees, Inc.**, **Research**, and **Capital** form the DAO. The homepage's
+separate **Ecosystem** section links to the [Bittrees Index](https://index.bittrees.org),
+where the other products, tools, and communities are discovered. Keep detailed
+product listings in that directory and the main landing page minimal.
 
 ## Pages
 
-- `/` — the hub: the Bittrees mark (which opens `/info`) over the three primary site cards.
+- `/` — the entry point: the Bittrees mark (which opens `/info`), a DAO group with three destinations, and an Ecosystem link.
 - `/info` — the mission blurb and the same three primary links, laid out for reading.
 
 ## Stack

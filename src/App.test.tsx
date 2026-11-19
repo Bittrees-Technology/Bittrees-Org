@@ -23,5 +23,12 @@ test("renders the Bittrees destinations", () => {
     "https://capital.bittrees.org"
   );
   expect(screen.queryByRole("link", { name: "eCrypt" })).not.toBeInTheDocument();
-  expect(document.querySelectorAll('a[href^="https://"]')).toHaveLength(3);
+  expect(screen.getByRole("heading", { name: "DAO" })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: "Ecosystem" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Explore products" })).toHaveAttribute("href", "https://index.bittrees.org");
+  expect(screen.getAllByRole("link", { name: "About Bittrees" })).toHaveLength(2);
+  for (const link of screen.getAllByRole("link", { name: "About Bittrees" })) {
+    expect(link).toHaveAttribute("href", "/info");
+  }
+  expect(document.querySelectorAll('a[href^="https://"]')).toHaveLength(4);
 });

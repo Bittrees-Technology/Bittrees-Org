@@ -10,7 +10,8 @@ test("renders the mission and a route back home", () => {
   );
 
   expect(screen.getByText(/making business simpler and more impactful/i)).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "Bittrees" })).toHaveAttribute("href", "/");
+  expect(screen.getByRole("link", { name: "Bittrees home" })).toHaveAttribute("href", "/");
+  expect(screen.getByRole("link", { name: "Back to home" })).toHaveAttribute("href", "/");
   expect(screen.queryByRole("link", { name: /AI/i })).not.toBeInTheDocument();
   expect(document.querySelectorAll('a[href^="https://"]')).toHaveLength(3);
 });

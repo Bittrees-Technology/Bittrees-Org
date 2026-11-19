@@ -1,82 +1,35 @@
 import { Link } from "react-router-dom";
-
 import ecosystem from "./ecosystem.json";
 
-const LINKS = ecosystem.projects;
+const DAO = ecosystem.projects.filter((site) => site.group === "dao");
 
 function Info() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        width: "100%",
-        background: "#ffffff",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "2rem 1.5rem",
-        boxSizing: "border-box",
-      }}
-    >
-      <h1 className="sr-only">About Bittrees</h1>
-      <Link reloadDocument to="/" className="mx-auto">
-        <picture>
-          <source srcSet="/bittrees.webp" type="image/webp" />
-          <img
-            src="/bittrees.png"
-            width={112}
-            height={112}
-            alt="Bittrees"
-            className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
-          />
-        </picture>
-      </Link>
-
-      <p className="info-text">
-        We’re dedicated to making business simpler and more impactful by harnessing the power of
-        technology, all while nurturing and fortifying bonds within the metaverse community and
-        extending these connections even further.
-      </p>
-
-      <div
-        style={{
-          display: "flex",
-          gap: "0.75rem",
-          flexWrap: "wrap",
-          marginTop: "2rem",
-          width: "100%",
-          maxWidth: "32rem",
-          alignItems: "stretch",
-        }}
-      >
-        {LINKS.map((l) => (
-          <a
-            key={l.href}
-            className="text-black no-underline hover:underline font-newtimesroman"
-            target="_self"
-            rel="noreferrer"
-            href={l.href}
-            style={{ flex: "1 1 0", minWidth: 0, display: "flex" }}
-          >
-            <div
-              className={`border px-3 py-2 shadow-md ${l.box}`}
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                textAlign: "center",
-                fontSize: "clamp(0.8rem, 3.2vw, 1rem)",
-              }}
-            >
-              {l.name}
-            </div>
-          </a>
-        ))}
-      </div>
-    </main>
+    <>
+      <a className="skip-link" href="#about-content">Skip to content</a>
+      <main className="landing">
+        <div className="front-door about-page">
+          <header className="identity">
+            <Link reloadDocument to="/" className="emblem-link" aria-label="Bittrees home">
+              <picture>
+                <source srcSet="/bittrees.webp" type="image/webp" />
+                <img src="/bittrees.png" alt="Bittrees" width={104} height={104} />
+              </picture>
+            </Link>
+            <h1>About Bittrees</h1>
+          </header>
+          <div id="about-content" className="about-content">
+            <p>We’re dedicated to making business simpler and more impactful by harnessing the power of technology, all while nurturing and fortifying bonds within the metaverse community and extending these connections even further.</p>
+          </div>
+          <nav className="destination-list about-destinations" aria-label="The Bittrees DAO">
+            {DAO.map((site) => (
+              <a key={site.id} className={`destination ${site.accent}`} href={site.href}>{site.name}</a>
+            ))}
+          </nav>
+          <footer><Link reloadDocument to="/">Back to home</Link></footer>
+        </div>
+      </main>
+    </>
   );
 }
-
 export default Info;
