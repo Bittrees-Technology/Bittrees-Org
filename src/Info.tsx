@@ -17,7 +17,7 @@ function Info() {
                 <img src="/bittrees.png" alt="Bittrees" width={104} height={104} />
               </picture>
             </Link>
-            <h1>About Bittrees</h1>
+            <h1>Our Mission</h1>
           </header>
           <div id="about-content" className="about-content">
             <p>We’re dedicated to making business simpler and more impactful by harnessing the power of technology, all while nurturing and fortifying bonds within the metaverse community and extending these connections even further.</p>
