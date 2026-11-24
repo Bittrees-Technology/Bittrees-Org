@@ -100,8 +100,9 @@ a:focus-visible { outline: 2px solid #1f5d3c; outline-offset: 5px; }
 .about-content p { margin: 0; }
 .about-destinations { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .about-destinations .destination { min-height: 48px; padding: 12px 8px; font-size: 1rem; }
-.inquiries { scroll-margin-top: 24px; }
 .inquiries p { margin: 0 0 16px; color: var(--muted); }
+.inquiries p a { color: var(--forest); text-decoration: underline; text-underline-offset: 3px; }
+.inquiries form { scroll-margin-top: 24px; }
 .inquiries fieldset { display: grid; gap: 8px; width: min(100%, 380px); margin: 0 auto; text-align: left; }
 .inquiries label { margin-top: 4px; font-size: .875rem; font-weight: 600; }
 .inquiries input:not([hidden]), .inquiries textarea {

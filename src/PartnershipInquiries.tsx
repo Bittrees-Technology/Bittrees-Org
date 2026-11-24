@@ -70,9 +70,17 @@ export default function PartnershipInquiries() {
             </Link>
             <h1>Partnership inquiries</h1>
           </header>
-          <div className="inquiries" id="inquiry-form">
-            <p>Tell us what you’d like to work on together. We’ll use your details to respond to your inquiry.</p>
-            <form method="post" onSubmit={sendInquiry} data-insights-ignore="true">
+          <div className="inquiries">
+            <p>
+              We welcome proposals for product integrations, joint research, and projects that support builders and
+              contributors. Explore the <a href="https://index.bittrees.org/">Bittrees Index</a> and{" "}
+              <a href="https://research.bittrees.org/">Bittrees Research</a> to see what we’re working on.
+            </p>
+            <p>
+              Tell us what you have in mind and who it would help. We’ll review your inquiry and use your email
+              address to follow up.
+            </p>
+            <form id="inquiry-form" method="post" onSubmit={sendInquiry} data-insights-ignore="true">
               <fieldset disabled={state === "sending"}>
                 <label htmlFor="inquiry-name">Name</label>
                 <input id="inquiry-name" name="name" autoComplete="name" maxLength={100} required />

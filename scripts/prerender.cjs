@@ -28,7 +28,7 @@ const template = fs.readFileSync(path.join(build, 'index.html'), 'utf8');
 const pages = [
   { route: '/', file: 'index.html', component: 'App', title: 'Bittrees | DAO &amp; Ecosystem', description: 'Explore the Bittrees DAO for governance, research and capital, and an ecosystem of independently useful products, tools and communities.' },
   { route: '/info', file: 'info.html', component: 'Info', title: 'About Bittrees | DAO &amp; Ecosystem', description: 'Learn how Governance, Research and Capital form the Bittrees DAO, and explore the wider ecosystem of independently useful products, tools and communities.' },
-  { route: '/partnership-inquiries', file: 'partnership-inquiries.html', component: 'PartnershipInquiries', title: 'Partnership inquiries | Bittrees', description: 'Contact Bittrees about a partnership and tell us what you would like to work on together.' },
+  { route: '/partnership-inquiries', file: 'partnership-inquiries.html', component: 'PartnershipInquiries', title: 'Partnership inquiries | Bittrees', description: 'Contact Bittrees about product integrations, joint research, or projects that support builders and contributors.' },
 ];
 
 for (const page of pages) {
