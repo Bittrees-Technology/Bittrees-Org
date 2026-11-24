@@ -82,6 +82,7 @@ h1 {
 footer { margin-top: 29px; font-size: .875rem; line-height: 1.5; color: var(--muted); }
 footer a { text-decoration: none; text-underline-offset: 4px; }
 footer a:hover { color: var(--ink); text-decoration: underline; }
+.site-footer { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; }
 a:focus-visible { outline: 2px solid #1f5d3c; outline-offset: 5px; }
 .skip-link {
   position: absolute; top: 12px; left: 12px; padding: 12px 16px;
@@ -99,6 +100,21 @@ a:focus-visible { outline: 2px solid #1f5d3c; outline-offset: 5px; }
 .about-content p { margin: 0; }
 .about-destinations { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .about-destinations .destination { min-height: 48px; padding: 12px 8px; font-size: 1rem; }
+.inquiries { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+.inquiries p { margin: 0 0 16px; color: var(--muted); }
+.inquiries fieldset { display: grid; gap: 8px; width: min(100%, 380px); margin: 0 auto; text-align: left; }
+.inquiries label { margin-top: 4px; font-size: .875rem; font-weight: 600; }
+.inquiries input:not([hidden]), .inquiries textarea {
+  width: 100%; padding: 9px 11px; border: 1px solid #a8b0a9; border-radius: 4px; background: #fff;
+}
+.inquiries textarea { resize: vertical; }
+.inquiries button {
+  justify-self: start; min-height: 44px; margin-top: 6px; padding: 9px 16px;
+  border-radius: 4px; background: var(--forest); color: #fff;
+}
+.inquiries button:disabled { opacity: .7; }
+.inquiries :is(input, textarea, button):focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
+.inquiries [role="status"], .inquiries [role="alert"] { margin: 12px 0 0; color: var(--ink); }
 @media (max-width: 480px) {
   .landing { padding: 36px 24px; }
   .identity { margin-bottom: 25px; }

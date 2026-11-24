@@ -35,7 +35,10 @@ function App() {
               <a className="destination explore" href={DIRECTORY.href}><span>Explore products</span></a>
             </section>
           </div>
-          <footer><Link reloadDocument to="/info">About Bittrees</Link></footer>
+          <footer className="site-footer">
+            <Link reloadDocument to="/info">About Bittrees</Link>
+            <Link reloadDocument to="/info#partnership-inquiries">Partnership inquiries</Link>
+          </footer>
         </div>
       </main>
     </>
