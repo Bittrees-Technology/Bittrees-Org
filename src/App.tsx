@@ -37,7 +37,7 @@ function App() {
           </div>
           <footer className="site-footer">
             <Link reloadDocument to="/info">About Bittrees</Link>
-            <Link reloadDocument to="/info#partnership-inquiries">Partnership inquiries</Link>
+            <Link reloadDocument to="/partnership-inquiries">Partnership inquiries</Link>
           </footer>
         </div>
       </main>

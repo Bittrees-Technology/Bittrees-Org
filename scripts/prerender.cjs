@@ -18,7 +18,7 @@ function component(name) {
     fileName: filename,
   });
   const exports = {};
-  // Only compile our two local, build-time page components.
+  // Only compile our local, build-time page components.
   new Function('require', 'exports', outputText)(createRequire(filename), exports);
   return exports.default;
 }
@@ -28,6 +28,7 @@ const template = fs.readFileSync(path.join(build, 'index.html'), 'utf8');
 const pages = [
   { route: '/', file: 'index.html', component: 'App', title: 'Bittrees | DAO &amp; Ecosystem', description: 'Explore the Bittrees DAO for governance, research and capital, and an ecosystem of independently useful products, tools and communities.' },
   { route: '/info', file: 'info.html', component: 'Info', title: 'About Bittrees | DAO &amp; Ecosystem', description: 'Learn how Governance, Research and Capital form the Bittrees DAO, and explore the wider ecosystem of independently useful products, tools and communities.' },
+  { route: '/partnership-inquiries', file: 'partnership-inquiries.html', component: 'PartnershipInquiries', title: 'Partnership inquiries | Bittrees', description: 'Contact Bittrees about a partnership and tell us what you would like to work on together.' },
 ];
 
 for (const page of pages) {
@@ -48,4 +49,4 @@ for (const page of pages) {
 }
 
 fs.writeFileSync(path.join(build, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(page => `  <url><loc>https://bittrees.org${page.route}</loc></url>`).join('\n')}\n</urlset>\n`);
-console.log('Prerendered / and /info; generated sitemap.xml.');
+console.log('Prerendered the public Bittrees pages and generated sitemap.xml.');

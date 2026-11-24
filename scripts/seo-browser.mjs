@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 const root=resolve('build');
 const server=createServer(async(req,res)=>{
  let path=new URL(req.url,'http://localhost').pathname;
- if(path==='/')path='/index.html';else if(path==='/info')path='/info.html';
+ if(path==='/')path='/index.html';else if(['/info','/partnership-inquiries'].includes(path))path+='.html';
  const file=resolve(root,'.'+path);
  if(!file.startsWith(root+sep)){res.writeHead(404).end();return;}
  try{const data=await readFile(file);res.setHeader('content-type',({'.html':'text/html','.js':'text/javascript','.css':'text/css','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml'})[extname(file)]||'application/octet-stream');res.end(data);}catch{res.writeHead(404,{'content-type':'text/html'});res.end(await readFile(resolve(root,'404.html')));}
@@ -29,10 +29,19 @@ try{
   await page.waitForURL(base+'/info');
   assert.equal(await page.title(),'About Bittrees | DAO & Ecosystem');
   assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),'https://bittrees.org/info');
+  assert.equal(await page.getByRole('button',{name:'Send inquiry',exact:true}).count(),0);
+  const inquiryLink=page.getByRole('link',{name:'Partnership inquiries',exact:true});
+  assert.equal(await inquiryLink.getAttribute('id'),'partnership-inquiries');
+  await inquiryLink.click();
+  await page.waitForURL(base+'/partnership-inquiries');
+  assert.equal(await page.getByRole('heading',{name:'Partnership inquiries',level:1}).count(),1);
+  assert.equal(await page.getByRole('button',{name:'Send inquiry',exact:true}).count(),1);
+  assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),'https://bittrees.org/partnership-inquiries');
   await page.getByRole('link',{name:'Bittrees home',exact:true}).click();
   await page.waitForURL(base+'/');
   assert.equal(await page.getByRole('heading',{name:'Ecosystem',exact:true}).count(),1);
   assert.equal(await page.getByRole('link',{name:'Explore products',exact:true}).getAttribute('href'),'https://index.bittrees.org');
+  assert.equal(await page.getByRole('link',{name:'Partnership inquiries',exact:true}).getAttribute('href'),'/partnership-inquiries');
   await page.setViewportSize({width:320,height:800});
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'320px overflow');
   if(javaScriptEnabled){await mkdir('artifacts/seo',{recursive:true});await page.screenshot({path:'artifacts/seo/mobile.png'});}
