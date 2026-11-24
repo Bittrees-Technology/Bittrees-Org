@@ -37,7 +37,8 @@ try{
   assert.equal(await page.getByRole('heading',{name:'Partnership inquiries',level:1}).count(),1);
   assert.equal(await page.getByRole('button',{name:'Send inquiry',exact:true}).count(),1);
   assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),'https://bittrees.org/partnership-inquiries');
-  await page.getByRole('link',{name:'Bittrees home',exact:true}).click();
+  assert.equal(await page.getByRole('link',{name:'Bittrees home',exact:true}).getAttribute('href'),'/');
+  await page.getByRole('link',{name:'Back to home',exact:true}).click();
   await page.waitForURL(base+'/');
   assert.equal(await page.getByRole('heading',{name:'Ecosystem',exact:true}).count(),1);
   assert.equal(await page.getByRole('link',{name:'Explore products',exact:true}).getAttribute('href'),'https://index.bittrees.org');

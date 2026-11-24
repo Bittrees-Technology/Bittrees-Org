@@ -88,8 +88,9 @@ export default function PartnershipInquiries() {
             {state === "failed" && <p role="alert">We couldn’t confirm your inquiry was sent. Please try again.</p>}
             {state === "limited" && <p role="alert">Please wait a few minutes before trying again.</p>}
           </div>
-          <footer>
+          <footer className="site-footer">
             <Link reloadDocument to="/info">About Bittrees</Link>
+            <Link reloadDocument to="/">Back to home</Link>
           </footer>
         </div>
       </main>
